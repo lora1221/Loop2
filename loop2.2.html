@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial</title>
+</head>
+<body>
+<script>
+    var numb;
+    var factorial = 1;
+    do {
+        numb = parseInt(prompt("Enter a positive number: "));
+    } while (numb <= 0);
+
+    for(var i = 1; i <= numb; i++){
+        factorial *= i;
+    }
+    document.write(numb + "! = "+factorial);
+
+</script>
+</body>
+</html>

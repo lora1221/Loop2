@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+<body style="font-family: 'Courier New';">
+<h1 id="Menu" style="color:#ff9846">Triangle Menu</h1>
+1 - Bottom Left <br>
+2 - Upper Left <br>
+3 - Bottom Right <br>
+4 - Upper Right <br>
+<input type="text" id="option"/>
+<button type="button" onclick="getInput()">Click Me!</button>
+<p id="output"></p>
+
+<script>
+    var h = parseInt(prompt("Enter the height of triangle: "));
+    function getInput() {
+        var a = document.getElementById("option").value;
+        var output = '';
+        switch(a) {
+            case "1":
+                alert("Your option is BOTTOM LEFT");
+                for(var i = 1; i <= h; i ++) {
+                    for (var j = 1; j <=i; j++) {
+                        output += "*";
+                    }
+                    output += "<br>";
+                }
+
+                break;
+            case "2":
+                alert("Your option is UPPER LEFT");
+                for(var i = h; i >= 1; i --) {
+                    for (var j = 1; j <=i; j++) {
+                        output += "*";
+                    }
+                    output += "<br>";
+                }
+                break;
+            case "3":
+                alert("Your option is BOTTOM RIGHT");
+                for(var i = h; i >= 1; i --) {
+                    for (var j = 1; j <=h; j++) {
+                        if (j < i) {
+                            output += "&nbsp;";
+                        } else {
+                            output += "*";
+                        }
+                    }
+                    output += "<br>";
+                }
+                break;
+            case "4":
+                alert("Your option is UPPER RIGHT");
+                for(var i = h; i >= 1; i --) {
+                    for (var j = h; j >= 1; j--) {
+                        if (j > i) {
+                            output += "&nbsp";
+                        } else {
+                            output += "*";
+                        }
+                    }
+                    output += "<br>";
+                }
+                break;
+            default:
+                alert("Not an option");
+        }
+        document.getElementById("output").innerHTML = output;
+
+    }
+
+</script>
+</body>
+</html>

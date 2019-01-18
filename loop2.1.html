@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body style="font-family: 'Courier New';">
+<script>
+    var h = 5;
+    document.write("Your option is BOTTOM RIGHT <br><br>");
+    for(var i = h; i >= 1; i --) {
+        for (var j = 1; j <=h; j++) {
+            if (j < i) {
+                document.write("&nbsp;");
+            } else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
