@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh Chu Nhat</title>
+</head>
+<body style="font-family: 'Courier New'";>
+<script>
+    var h = parseInt(prompt("Enter height of rectangle: "));
+    var w = parseInt(prompt("Enter width of rectangle: "));
+    for(var i = 1; i <= h; i++) {
+        if (i == 1 || i == h) {
+            for (var j = 1; j <= w; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        } else {
+            for(var j = 1; j <= w; j ++) {
+                if (j == 1 || j == w) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>
